@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Modal = require('../mongoDB/modals/index');
+const Modal = require('../../mongoDB/modals/index');
 
 router.get('/getAllUsers', async (req, res) => {
     try {

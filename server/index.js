@@ -5,7 +5,8 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require('cors');
 const { PORT } = require("./constants");
-const routes = require("./routes/index")
+const routes = require("./services/routes");
+const emailRouter = require("./services/otp/index");
 const ObjectId = mongoose.Types.ObjectId;
 
 const app = express(express.json());
@@ -14,6 +15,7 @@ app.use(cors());
 
 
 app.use('/info', routes); 
+app.use('/otp', emailRouter); 
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
