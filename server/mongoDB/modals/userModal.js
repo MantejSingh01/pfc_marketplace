@@ -11,8 +11,15 @@ const userSchema = new Schema({
     industryCategory: { type: String },
     licencesCertifications: { type: String },
     taxID: { type: Number },
-    isKYCDone: { type: Boolean, default: false }
-  });
+    isKYCDone: { type: Boolean, default: false },
+    businessDoc:{ type: String },
+  },
+  {
+    timestamps: true,
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true }
+}
+);
 
 const User = mongoose.model('User', userSchema);
 
