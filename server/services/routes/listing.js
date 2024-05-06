@@ -34,7 +34,6 @@ router.post('/addListing', async (req, res) => {
       } = req.body;
   
       const newListing = new Modal.ListingModal({
-        // user,
         description,
         pricingStructure,
         materialDescription,

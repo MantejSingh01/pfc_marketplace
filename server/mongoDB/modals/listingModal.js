@@ -20,7 +20,11 @@ const listingSchema = new Schema({
     packaging: { type: String},
     availabilityDate: { type: Date }, 
     bulkListingTimeline: { type: Number }, 
-  });
+  },{
+    timestamps: true,
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true }
+});
 
   const Listing = mongoose.model('Listing', listingSchema);
 

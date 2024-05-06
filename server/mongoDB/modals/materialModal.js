@@ -12,7 +12,11 @@ const materialSchema = new Schema({
     qualityCheck: { type: String, required: true },
     sellersConsent: { type: String }, 
     paymentInformation: { type: String, required: true },
-  });
+  },{
+    timestamps: true,
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true }
+});
   
   const Material = mongoose.model('Material', materialSchema);
   module.exports = Material;

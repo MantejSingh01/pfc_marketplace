@@ -4,13 +4,13 @@ const Modal = require("./mongoDB/modals/index");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require('cors');
-const { PORT } = require("./constants");
+const { PORT } = require("./constants/config");
 const routes = require("./services/routes");
 const emailRouter = require("./services/otp/index");
 const ObjectId = mongoose.Types.ObjectId;
 
 const app = express(express.json());
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit:'100mb'}));
 app.use(cors());
 
 

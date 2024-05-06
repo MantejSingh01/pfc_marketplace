@@ -4,7 +4,7 @@ const Modal = require('../../mongoDB/modals/index');
 
 router.get('/getAllUsers', async (req, res) => {
     try {
-        const results = await Modal.UserModal.find();
+        const results = await Modal.UserModal.find().sort({ createdAt: -1 });
         console.log(results);
         res.status(200).json(results); 
     } catch (error) {

@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# constants
+*.env
+.env
+config.js
+./server/constants/config.js

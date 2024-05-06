@@ -3,8 +3,8 @@ const Schema = mongoose.Schema;
 
 // Define the OTP schema
 const otpSchema = new Schema({
-  email:{type: String},
-  phoneNumber: { type: Number },
+  email:{type: String, default:""},
+  phoneNumber: { type: Number ,default:null},
   otpCode: { type: String, required: true },
   createdAt: { type: Date, default: Date.now, expires: 300 }, 
 });
