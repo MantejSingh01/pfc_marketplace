@@ -12,9 +12,11 @@ code {
     monospace;
 }
 
+
 .nav-bar {
   height: 90px;
   background-color: white !important;
+  position: sticky;
 }
 
 .nav-container {
@@ -52,6 +54,7 @@ code {
 .drawer-container {
   display: flex;
   height: calc(100vh - 90px);
+  position: sticky;
 
 }
 
@@ -61,8 +64,23 @@ code {
 }
 
 .DC-conatiner {
+  /* display: flex; */
+  height: 100%;
+  
+  
+}
+.table-conatiner-full{
   display: flex;
-
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.table-conatiner-half{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .normal-width {
@@ -184,29 +202,28 @@ code {
 /* .header{
   position: fixed;
  }
- /* .main-conatiner{
+ /* .main-container{
   position: relative;
   top: 90px;
  } */
-*/ .main-conatiner {
-  position: relative;
-  top: 100px;
-}
+*/ 
 
-.pagination {
+.pagination-conatiner {
   display: flex !important;
   justify-content: center !important;
   align-items: center;
+  margin: 10px !important;
 }
 
-.onboard-main-conatiner,
-.kyc-main-conatiner,
-.list-main-conatiner,
-.material-main-conatiner {
+.onboard-main-container,
+.kyc-main-container,
+.list-main-container,
+.material-main-container {
   display: flex;
   width: auto;
   flex-direction: column;
   flex: 1;
+  height: 100%;
 }
 
 .onboard-nav,
@@ -401,7 +418,11 @@ justify-content: space-between;
   margin-right: 10px;
   object-fit: contain;
 }
-
+.onboard-main-container,.list-main-container,.material-main-container,.kyc-main-container{
+  background-color: white;
+  border-radius: 5px;
+  height: inherit;
+}
 .drawer-container {
   transition: width 0.3s ease;
 }
@@ -420,6 +441,7 @@ justify-content: space-between;
 }
 
 .main-header {
+  display: block;
   position: sticky;
   top: 0;
   background-color: #fff;
@@ -427,11 +449,29 @@ justify-content: space-between;
 }
 
 .sticky-drawer {
-  position: fixed;
-  top: 150px;
-  height: 100%;
+  width: 200px;
   background-color: #f0f0f0;
   z-index: 100;
   overflow-y: auto;
+  
+}
+
+.main-container-app {
+  flex: 1; 
+  overflow-y: auto; 
   display: flex;
+}
+
+.main-container {
+  flex: 1; 
+  overflow-y: auto; 
+  height: auto;
+  padding:4px;
+ 
+}
+
+.App{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

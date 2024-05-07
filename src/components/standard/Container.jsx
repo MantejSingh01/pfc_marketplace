@@ -4,10 +4,8 @@ import { Outlet } from "react-router-dom";
 
 function Container(props) {
   return (
-    <div className="main-conatiner">
+    <div className="main-container">
       <div className="DC-conatiner">
-        <Drawer_pfc />
-
         <Outlet />
       </div>
     </div>

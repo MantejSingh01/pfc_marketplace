@@ -54,7 +54,7 @@ function KycComponent(props) {
   };
   const { user } = fieldValuesObj;
   return (
-    <div className="kyc-main-conatiner">
+    <div className="kyc-main-container">
       <AppBar className="kyc-nav" position="sticky">
         <h2>KYC & Agreement</h2>
         <Button className="kyc-button" onClick={handleOpenModaltoggle}>

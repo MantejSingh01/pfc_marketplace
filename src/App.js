@@ -30,7 +30,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Container />,
+        element: <div className="main-container-app"> <Drawer_pfc /><Container /></div>,
         children: [
           { path: "/", element: <Dashboard /> },
           {
@@ -60,6 +60,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+     
       <Outlet />
     </div>
   );

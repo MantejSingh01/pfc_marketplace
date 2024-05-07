@@ -54,7 +54,7 @@ function MaterialSealection(props) {
     }
   };
   return (
-    <div className="material-main-conatiner">
+    <div className="material-main-container">
       <AppBar className="material-nav" position="sticky">
         <h2>Material Selection</h2>
         <Button className="material-button" onClick={handleOpenModaltoggle}>

@@ -10,7 +10,6 @@ const transporter = nodemailer.createTransport({
     pass: config.PASSWORD,
   },
 });
-
 const twilioClient = twilio(
   config.TWILIO_ACCOUNT_SID,
   config.TWILIO_AUTH_TOKEN
@@ -56,6 +55,7 @@ async function sendEmailOTP(email, otpCode) {
 }
 
 async function sendSMSOTP(phoneNumber, otpCode) {
+  console.log(phoneNumber)
   await twilioClient.messages.create({
     body: `Your OTP is: ${otpCode}`,
     from: "+12546383284",

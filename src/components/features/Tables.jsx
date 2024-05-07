@@ -71,6 +71,10 @@ const Tables = (props) => {
             page={page}
             onChange={handleChangePage}
             siblingCount={0}
+            className="pagination-conatiner"
+            sx={{
+              margin:"20px !important"
+            }}
           />
         </Stack>
       )}

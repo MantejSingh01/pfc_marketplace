@@ -30,7 +30,7 @@ function OnBoarding(props) {
   }, [data, kyc]);
 
   return (
-    <div className="onboard-main-conatiner">
+    <div className="onboard-main-container">
       <AppBar className="onboard-nav" position="sticky">
         <h2>On Boarded Members list</h2>
         <Button className="onBoard-button" onClick={handleOpenModaltoggle}>

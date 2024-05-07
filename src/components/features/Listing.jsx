@@ -27,7 +27,7 @@ function Listing(props) {
     setOpen(!open);
   };
   return (
-    <div className="list-main-conatiner">
+    <div className="list-main-container">
       <AppBar className="list-nav" position="sticky">
         <h2>Listings</h2>
         <Button className="list-button" onClick={handleOpenModaltoggle}>

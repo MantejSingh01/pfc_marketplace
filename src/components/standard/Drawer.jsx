@@ -60,7 +60,7 @@ function Drawer_pfc(props) {
   }, []);
 
   return (
-    <Box className={`drawer-container `}>
+    <Box className={`drawer-container`}>
       <Drawer
         className={open ? "drawer-open" : "normal-width"}
         variant="permanent"
