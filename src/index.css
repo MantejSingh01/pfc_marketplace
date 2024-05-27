@@ -64,7 +64,7 @@ code {
 }
 
 .DC-conatiner {
-  /* display: flex; */
+  
   height: 100%;
   
   
@@ -199,14 +199,6 @@ code {
   font-size: 1rem !important;
 }
 
-/* .header{
-  position: fixed;
- }
- /* .main-container{
-  position: relative;
-  top: 90px;
- } */
-*/ 
 
 .pagination-conatiner {
   display: flex !important;
@@ -360,7 +352,7 @@ code {
 .file-upload {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
+  
   flex-direction: column;
 }
 
@@ -380,7 +372,7 @@ input[type=number] {
 
 .otp-successfull {
   background-color: transparent !important;
-  /* height: 50px; */
+  
   box-shadow: none !important;
   pointer-events: none;
 }
@@ -391,12 +383,7 @@ input[type=number] {
 
 }
 
-/* .table-conatiner-half{
-min-height: calc(80% - 10px);
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-} */
+
 
 .notification-box {
   position: absolute;

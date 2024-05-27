@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./components/standard/Header";
 import Drawer_pfc from "./components/standard/Drawer";
-import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Outlet, RouterProvider, createBrowserRouter, createHashRouter } from "react-router-dom";
 import Container from "./components/standard/Container";
 import Dashboard from "./components/features/Dashboard";
 import OnBoarding from "./components/features/OnBoarding";
@@ -19,7 +19,7 @@ export const theme = createTheme({
   },
 });
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: "/",
     element: (
