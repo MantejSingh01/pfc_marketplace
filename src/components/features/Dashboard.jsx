@@ -15,6 +15,7 @@ import { setUser, updateUser, useGetAllUsersQuery } from "../../redux/userSlice"
 import { fieldValuesObj } from "../../constants/extra";
 import Tables from "./Tables";
 import { useDispatch, useSelector } from "react-redux";
+import Loading from "./Loading";
 const valueFormatter = (value) => `${value} kg`;
 
 function Dashboard() {
@@ -47,6 +48,7 @@ function Dashboard() {
             { dataKey: "sales", label: "Sales", valueFormatter },
           ]}
           layout="horizontal"
+         
           {...chartSetting}
         />
         <PieChart
@@ -67,7 +69,7 @@ function Dashboard() {
           {...pieSize}
         />
       </div>
-      <div className="dashboard-inner">
+      {isLoading ? <Loading items={5}/> :<div className="dashboard-inner">
         <Box className="box-nav-bar">
           <Box className="box-nav-inner">
             <h2>On Board Members List</h2>
@@ -86,7 +88,7 @@ function Dashboard() {
             formatFunc={formatDate}
           />
         </div>
-      </div>
+      </div>}
     </div>
   );
 }

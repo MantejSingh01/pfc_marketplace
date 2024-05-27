@@ -310,7 +310,7 @@ const FormModal = ({ open, onClose, keyName, userId }) => {
   };
 
   return (
-    <Modal open={open} onClose={handleClose}>
+    <Modal open={open} onClose={handleClose} BackdropProps={{ onClick: (event) => event.stopPropagation()}}>
       <Box className="form-modal-container">
         <div className="modal-header">
           <IconButton onClick={handleClose} aria-label="close">

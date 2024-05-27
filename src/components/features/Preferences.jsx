@@ -14,7 +14,6 @@ const PreferencesSettingsModal = ({ open, onClose }) => {
   const [notificationPref, setNotificationPref] = useState(false);
   const [languageSettings, setLanguageSettings] = useState(false);
   const [privacyConsent, setPrivacyConsent] = useState(false);
-  const [allChecked, setAllChecked] = useState(false);
 
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;
@@ -23,12 +22,10 @@ const PreferencesSettingsModal = ({ open, onClose }) => {
     else if (name === "privacyConsent") setPrivacyConsent(checked);
   };
 
-  const checkAllChecked = () => {
-    setAllChecked(notificationPref && languageSettings && privacyConsent);
-  };
+
 
   const handleDone = () => {
-    if (allChecked) {
+    if (notificationPref && languageSettings &&privacyConsent ) {
       console.log("All checkboxes are checked");
       onClose();
     } else {
@@ -37,7 +34,7 @@ const PreferencesSettingsModal = ({ open, onClose }) => {
   };
 
   return (
-    <Modal open={open} onClose={onClose}>
+    <Modal open={open} onClose={onClose} BackdropProps={{ onClick: (event) => event.stopPropagation()}}>
       <Box
         sx={{
           position: "absolute",
@@ -90,7 +87,7 @@ const PreferencesSettingsModal = ({ open, onClose }) => {
         <Button
           variant="contained"
           color="primary"
-          disabled={!allChecked}
+          disabled={!notificationPref && !languageSettings && !privacyConsent }
           onClick={handleDone}
         >
           Done

@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import NotificationModal from "./NotificationModal";
 import FormModal from "./FormModal";
 import { useGetAllListQuery } from "../../redux/listSlice";
+import Loading from "./Loading";
 
 function MaterialSealection(props) {
   const { data, error, isLoading } = useGetAllMaterialQuery();
@@ -61,6 +62,7 @@ function MaterialSealection(props) {
           + Add new
         </Button>
       </AppBar>
+      {isLoading && <Loading items={6}/>}
       {data && data.length ? (
         <Tables
           data={materialList}
@@ -70,7 +72,7 @@ function MaterialSealection(props) {
           from={"Parent"}
         />
       ) : (
-        !open && <NoResults />
+        !isLoading && material.length ==0 && <NoResults />
       )}
       {open && isMaterialSelected && (
         <FormModal

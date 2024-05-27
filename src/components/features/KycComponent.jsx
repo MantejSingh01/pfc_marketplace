@@ -7,6 +7,7 @@ import {  useGetAllUsersQuery } from "../../redux/userSlice";
 import FormModal from "./FormModal";
 import NotificationModal from "./NotificationModal";
 import { useDispatch, useSelector } from "react-redux";
+import Loading from "./Loading";
 
 function KycComponent(props) {
   const { data, error, isLoading, refetch } = useGetAllUsersQuery({
@@ -61,6 +62,7 @@ function KycComponent(props) {
           + Add new
         </Button>
       </AppBar>
+      {isLoading && <Loading items={6}/>}
       {kycData && kycData.length ? (
         <Tables
           data={kycData}
@@ -70,7 +72,7 @@ function KycComponent(props) {
           from={"Parent"}
         />
       ) : (
-        !open && <NoResults />
+        !isLoading && kycData.length ==0 && <NoResults />
       )}
       {open && isUserSelected && (
         <FormModal

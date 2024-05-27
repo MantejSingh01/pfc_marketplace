@@ -237,14 +237,22 @@ code {
   padding: 0 10px;
   background-color: #1F3555 !important;
 }
-
 .onBoard-button,
 .kyc-button,
 .material-button,
 .list-button {
   color: white !important;
 }
-
+.loading-main{
+  background-color: white;
+    height: calc(50vh - 30px);
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+.css-ayl0v9-MuiSkeleton-root{
+  height: 80px !important;
+}
 .no-result-img {
   background-image: url('../src/asserts/noresults.png');
   background-size: cover;

@@ -6,6 +6,7 @@ import NoResults from "./NoResults";
 import { AppBar, Button } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import FormModal from "./FormModal";
+import Loading from "./Loading";
 
 function Listing(props) {
   const { data, error, isLoading } = useGetAllListQuery();
@@ -34,6 +35,7 @@ function Listing(props) {
           + Add new
         </Button>
       </AppBar>
+      {isLoading && <Loading items={6}/>}
       {list && list.length ? (
         <Tables
           data={list}
@@ -43,7 +45,7 @@ function Listing(props) {
           from={"Parent"}
         />
       ) : (
-        !open && <NoResults />
+        !isLoading && list.length == 0 && <NoResults />
       )}
       {open && (
         <FormModal
