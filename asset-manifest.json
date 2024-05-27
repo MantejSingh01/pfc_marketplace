@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/pfc_marketplace/static/css/main.66cd2ce8.css",
+    "main.js": "/pfc_marketplace/static/js/main.5c3c6e80.js",
+    "static/js/453.b31296eb.chunk.js": "/pfc_marketplace/static/js/453.b31296eb.chunk.js",
+    "static/media/noresults.png": "/pfc_marketplace/static/media/noresults.3445aded455a50a62d0c.png",
+    "index.html": "/pfc_marketplace/index.html",
+    "main.66cd2ce8.css.map": "/pfc_marketplace/static/css/main.66cd2ce8.css.map",
+    "main.5c3c6e80.js.map": "/pfc_marketplace/static/js/main.5c3c6e80.js.map",
+    "453.b31296eb.chunk.js.map": "/pfc_marketplace/static/js/453.b31296eb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.66cd2ce8.css",
+    "static/js/main.5c3c6e80.js"
+  ]
+}
